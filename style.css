@@ -56,7 +56,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     margin: auto;
 }
 .headerhome .container{
-    max-width: 1200px;
+    max-width: 1300px;
     margin: auto;
 }
 .header{
@@ -68,9 +68,20 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     align-items: center;
     justify-content: space-between;
     padding-bottom: 40px;
-    border-bottom: 2px solid #E2E2E2;
+    position: relative;
+}
+.nav1:after{
+    content: "";
+    display: block;
+    width: 111%;
+    height: 1px;
+    background: rgba(208, 208, 208, 1);
+    position: absolute;
+    bottom: 0;
+    left: -72px;
 }
 .nav1 > div{
+    
     border-right: 2px solid #E2E2E2;
     height: 40px;
     display: flex;
@@ -78,6 +89,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     justify-content: space-between;
     width: 100%;
 }
+
 .nav1 .language{
     display: flex;
     flex-direction: column;
@@ -107,13 +119,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     font-size: 18px;
     display: flex;
     justify-content: space-around;
-    
+    padding-right: 15px;
 }
 .nav1 .social i{
     padding-left: 18px;
     color: black;
 }
 .nav1 .numberphone{
+    padding-left: 20px;
+    padding-right: 20px;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -177,6 +191,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     display: flex;
     padding-top: 20px;
 }
+
 .nav2 i{
     color: black;
     margin-left: 25px;
@@ -219,19 +234,31 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     background: red;
     opacity: 0;
     transition: opacity 1s;
+    background: white;
+}
+.nav ul li ul{
+    border: 1px solid #D0D0D0;
+    border-top: 3px solid #DD4053;
+}
+.nav ul li ul li{
+    border-bottom: 1px solid #D0D0D0;
+}
+.nav ul li ul li a{
+    width: 280px;
+    text-align: left;
+    padding: 10px 15px;
 }
 .nav a:hover:after{
     opacity: 1;
 }
 .nav a:hover{
-    color: blueviolet;
+    color: #DD4053;
 }
 .nav ul ul {
     display: none;
     position: absolute;
     text-align: center;
     background: white;
-    padding: 10px;
     z-index: 500;
 }
 .nav ul li:hover > ul{
@@ -257,7 +284,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     content: "";
     transform: rotate(180deg);
 }
-
+.nav ul .small ul li a{
+    width: 150px;
+}
 
 .container{
     max-width: 1100px;
@@ -265,6 +294,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     margin: auto;
     position: relative;
 }
+
 
 .faq{
     width: 1440px;
@@ -311,17 +341,17 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     width: 800px;
     margin-left: 30px;
 }
-.faq .block{
+.faq .accordion-item{
     width: 100%;
     margin-top: 20px;
     border-bottom: 1px solid #D0D0D0;
 }
-.faq .top{
+.faq .accordion-item__trigger{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
-.faq .top .cont{
+.faq .accordion-item__trigger .cont{
     width: 700px;
     display: flex;
     justify-content: space-between;
@@ -334,35 +364,55 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     font-size: 14px;
     padding: 7px 10px;
 }
-.faq .numred h3{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    background: #DD4053;
-    color: white;
-    padding: 7px 10px;
-}
 
-.faq .top h1{
+.faq .accordion-item__trigger h1{
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
     font-size: 22px;
     margin: 0px 0 0 20px;
 }
-.faq .top i{
-    font-size: 20px;
+.faq .accordion-item__trigger:hover .num h3{
+    background: #DD4053;
+    color: white;
+}
+.faq .accordion-item__trigger:hover i{
     color: #DD4053;
 }
-.faq .top .fa-long-arrow-alt-down{
+.faq .accordion-item__trigger i{
+    font-size: 20px;
+    
+}
+.faq .accordion-item__trigger .fa-long-arrow-alt-down{
     color: #C6C6C6;
 }
-.faq .description h2{
+.faq .accordion-item__content h2{
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     width: 700px;
 }
+.accordion-item__content{
+    display: none;
+}
+.accordion-item--active .accordion-item__content{
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .bottomcontent{
     width: 1440px;
