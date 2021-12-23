@@ -363,6 +363,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     font-weight: 700;
     font-size: 14px;
     padding: 7px 10px;
+    transition: .5s;
 }
 
 .faq .accordion-item__trigger h1{
@@ -370,6 +371,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     font-weight: 500;
     font-size: 22px;
     margin: 0px 0 0 20px;
+    
 }
 .faq .accordion-item__trigger:hover .num h3{
     background: #DD4053;
@@ -380,9 +382,12 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 .faq .accordion-item__trigger i{
     font-size: 20px;
-    
+    transition: .5s;
 }
 .faq .accordion-item__trigger .fa-long-arrow-alt-down{
+    color: #C6C6C6;
+}
+.faq .accordion-item__trigger .fa-long-arrow-alt-up{
     color: #C6C6C6;
 }
 .faq .accordion-item__content h2{
@@ -398,9 +403,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .accordion-item--active .accordion-item__content{
     display: block;
 }
-
-
-
+.accordion-item .iconn2{
+    display: none;
+}
+.accordion-item--active .iconn1{
+    display: none;
+}
+.accordion-item--active .iconn2{
+    display: block;
+}
 
 
 
